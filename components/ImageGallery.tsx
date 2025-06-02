@@ -28,6 +28,7 @@ export function ImageGallery({ images }: ImageGalleryProps) {
                   width={200}
                   height={200}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
