@@ -1,13 +1,13 @@
 "use client"
 
-import { Github, Instagram, Linkedin } from "lucide-react"
+import { Github, Instagram, Linkedin, Globe } from "lucide-react"
 
 const socialLinks = [
   {
     name: "GitHub",
     url: "https://github.com/ttv-voidgg/",
     icon: Github,
-    hoverColor: "hover:text-white/80",
+    hoverColor: "hover:text-purple-500/80",
   },
   {
     name: "Instagram",
@@ -20,6 +20,12 @@ const socialLinks = [
     url: "https://www.linkedin.com/in/jcedeborja",
     icon: Linkedin,
     hoverColor: "hover:text-blue-400",
+  },
+  {
+    name: "Website",
+    url: "https://webdev.eejay.me",
+    icon: Globe,
+    hoverColor: "hover:text-green-400",
   },
 ]
 

@@ -120,7 +120,7 @@ const initialFrames: Frame[] = [
     isHovered: false,
     title: "WebGL Full-Stack Portfolio",
     description:
-      "I created a portfolio to showcase my Full-Stack software engineering skills. You can check it out at https://webdev.eejay.me",
+      "I created a portfolio to showcase my Full-Stack software engineering skills. You can visit my portfolio by following this link: https://webdev.eejay.me",
     technologies: ["Blender", "Three.js", "Vite", "React", "WebGL", "WebXR",  "GLSL", "JavaScript"],
     category: "3D Modeling and Web Development",
     year: "2023",
@@ -356,11 +356,23 @@ export default function DynamicFrameLayout() {
     // For now, we'll just log the values
   }
 
-  function linkify(text) {
+  function parseDescription(text) {
     const urlRegex = /(https?:\/\/[^\s]+)/g;
-    return text.replace(
-        urlRegex,
-        '<a href="$1" target="_blank" rel="noopener noreferrer" class="underline text-blue-400 hover:text-blue-300">$1</a>'
+    const parts = text.split(urlRegex);
+    return parts.map((part, i) =>
+        urlRegex.test(part) ? (
+            <a
+                key={i}
+                href={part}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+            >
+              {part}
+            </a>
+        ) : (
+            part
+        )
     );
   }
 
@@ -520,7 +532,7 @@ export default function DynamicFrameLayout() {
               <div className="space-y-6">
                 <div>
                   <h3 className="text-lg font-medium text-white mb-2">Description</h3>
-                  <p className="text-white/70 leading-relaxed">dangerouslySetInnerHTML={{ __html: linkify(selectedFrame.description) }}</p>
+                  <p className="text-white/70 leading-relaxed">{parseDescription(selectedFrame.description)}</p>
                 </div>
 
                 <div>
