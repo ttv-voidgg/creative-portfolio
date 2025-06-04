@@ -115,7 +115,7 @@ const initialFrames: Frame[] = [
     edgeVertical: "https://static.cdn-luma.com/files/9e67e05f37e52522/4_vert_update.png",
     mediaSize: 1,
     borderThickness: 0,
-    borderSize: 90,
+    borderSize: 85,
     autoplayMode: "all",
     isHovered: false,
     title: "WebGL Full-Stack Portfolio",
