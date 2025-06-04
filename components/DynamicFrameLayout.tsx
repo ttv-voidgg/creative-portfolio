@@ -120,7 +120,7 @@ const initialFrames: Frame[] = [
     isHovered: false,
     title: "WebGL Full-Stack Portfolio",
     description:
-      "I created a portfolio to showcase my Full-Stack software engineering skills",
+      "I created a portfolio to showcase my Full-Stack software engineering skills you can check it out at https://webdev.eejay.me,
     technologies: ["Blender", "Three.js", "Vite", "React", "WebGL", "WebXR",  "GLSL", "JavaScript"],
     category: "3D Modeling and Web Development",
     year: "2023",
