@@ -120,7 +120,7 @@ const initialFrames: Frame[] = [
     isHovered: false,
     title: "WebGL Full-Stack Portfolio",
     description:
-      "I created a portfolio to showcase my Full-Stack software engineering skills you can check it out at https://webdev.eejay.me",
+      "I created a portfolio to showcase my Full-Stack software engineering skills. You can check it out at https://webdev.eejay.me",
     technologies: ["Blender", "Three.js", "Vite", "React", "WebGL", "WebXR",  "GLSL", "JavaScript"],
     category: "3D Modeling and Web Development",
     year: "2023",
@@ -356,6 +356,14 @@ export default function DynamicFrameLayout() {
     // For now, we'll just log the values
   }
 
+  function linkify(text) {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(
+        urlRegex,
+        '<a href="$1" target="_blank" rel="noopener noreferrer" class="underline text-blue-400 hover:text-blue-300">$1</a>'
+    );
+  }
+
   return (
     <div className="space-y-4 w-full h-full">
       <div className="flex justify-between items-center mb-4 max-sm:hidden">
@@ -512,7 +520,7 @@ export default function DynamicFrameLayout() {
               <div className="space-y-6">
                 <div>
                   <h3 className="text-lg font-medium text-white mb-2">Description</h3>
-                  <p className="text-white/70 leading-relaxed">{selectedFrame.description}</p>
+                  <p className="text-white/70 leading-relaxed">dangerouslySetInnerHTML={{ __html: linkify(selectedFrame.description) }}</p>
                 </div>
 
                 <div>
