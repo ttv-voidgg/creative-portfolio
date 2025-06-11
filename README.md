@@ -54,7 +54,7 @@ yarn dev
 
 ## Project Structure
 
-\`\`\`
+```
 ├── app/
 │   ├── fonts.ts          # Font configurations
 │   ├── globals.css       # Global styles
@@ -70,7 +70,7 @@ yarn dev
 │   └── useAssetLoader.ts # Asset loading hook
 └── lib/
     └── utils.ts          # Utility functions
-\`\`\`
+```
 
 ## Customization
 
