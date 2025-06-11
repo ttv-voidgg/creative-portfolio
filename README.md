@@ -1,3 +1,17 @@
+---
+title: My Creative Portfolio
+description: A dynamic, interactive portfolio showcasing photography, 3D modeling, and web development work.
+date: 2025-06-01
+image: https://creative.eejay.me/creative.png 
+site: https://creative.eejay.me/
+category: Development
+author:
+ name: Juan Carlos de Borja
+ role: Developer and Author
+ avatar: https://github.com/ttv-voidgg.png  
+---
+
+
 # Juan Carlos Portfolio
 
 A dynamic, interactive portfolio showcasing photography, 3D modeling, and web development work.
