@@ -13,7 +13,8 @@ const CELL_SIZE = 60 // pixels per grid cell
 
 interface Frame {
   id: number
-  video: string
+  video?: string | null
+  coverImage?: string | null
   defaultPos: { x: number; y: number; w: number; h: number }
   corner: string
   edgeHorizontal: string
@@ -35,8 +36,37 @@ interface Frame {
 
 const initialFrames: Frame[] = [
   {
+    id: 0,
+    video: null,
+    coverImage: "/assets/images/gits-1.jpg",
+    defaultPos: { x: 0, y: 0, w: 4, h: 4 },
+    corner: "https://static.cdn-luma.com/files/bcf576df9c38b05f/1_corner_update.png",
+    edgeHorizontal: "https://static.cdn-luma.com/files/bcf576df9c38b05f/1_vert_update.png",
+    edgeVertical: "https://static.cdn-luma.com/files/bcf576df9c38b05f/1_hori_update.png",
+    mediaSize: 1,
+    borderThickness: 0,
+    borderSize: 90,
+    autoplayMode: "all",
+    isHovered: false,
+    title: "Ghost in the Shell",
+    description:
+      "Improving my lighting and post production skills in Blender and Adobe Creative Suite",
+    technologies: ["Blender", "Lens Flare", "Adobe Creative Suite"],
+    category: "Photography & Modeling",
+    year: "2025",
+    images: [
+      "/assets/images/gits-0.png",
+      "/assets/images/gits-1.jpg",
+      "/assets/images/gits-2.jpg",
+      "/assets/images/gits-3.jpg",
+      "/assets/images/gits-4.jpg",
+      "/assets/images/gits-5.jpg",
+    ],
+  },  
+  {
     id: 1,
     video: "/assets/videos/reel-1.mp4",
+    coverImage: null,
     defaultPos: { x: 0, y: 0, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/bcf576df9c38b05f/1_corner_update.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/bcf576df9c38b05f/1_vert_update.png",
@@ -61,6 +91,7 @@ const initialFrames: Frame[] = [
   {
     id: 2,
     video: "/assets/videos/porsche.mp4",
+    coverImage: null,
     defaultPos: { x: 4, y: 0, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/bcf576df9c38b05f/2_corner_update.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/bcf576df9c38b05f/2_vert_update.png",
@@ -85,6 +116,7 @@ const initialFrames: Frame[] = [
   {
     id: 3,
     video: "/assets/videos/wpg-beach.mp4",
+    coverImage: null,
     defaultPos: { x: 8, y: 0, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/3d36d1e0dba2476c/3_Corner_update.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/3d36d1e0dba2476c/3_hori_update.png",
@@ -109,6 +141,7 @@ const initialFrames: Frame[] = [
   {
     id: 4,
     video: "/assets/videos/room.mp4",
+    coverImage: null,
     defaultPos: { x: 0, y: 4, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/9e67e05f37e52522/4_corner_update.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/9e67e05f37e52522/4_hori_update.png",
@@ -134,6 +167,7 @@ const initialFrames: Frame[] = [
   {
     id: 5,
     video: "/assets/videos/sazabi.mp4",
+    coverImage: null,
     defaultPos: { x: 4, y: 4, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/9e67e05f37e52522/5_corner_update.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/9e67e05f37e52522/5_hori_update.png",
@@ -159,6 +193,7 @@ const initialFrames: Frame[] = [
   {
     id: 6,
     video: "/assets/videos/kenora.mp4",
+    coverImage: null,
     defaultPos: { x: 8, y: 4, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/1199340587e8da1d/6_corner.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/1199340587e8da1d/6_corner-1.png",
@@ -185,6 +220,7 @@ const initialFrames: Frame[] = [
   {
     id: 7,
     video: "/assets/videos/aurora.mp4",
+    coverImage: null,
     defaultPos: { x: 0, y: 8, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/b80b5aa00ccc33bd/7_corner.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/b80b5aa00ccc33bd/7_hori.png",
@@ -209,6 +245,7 @@ const initialFrames: Frame[] = [
   {
     id: 8,
     video: "/assets/videos/vancity.mp4",
+    coverImage: null,
     defaultPos: { x: 4, y: 8, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/981e483f71aa764b/8_corner.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/981e483f71aa764b/8_hori.png",
@@ -233,6 +270,7 @@ const initialFrames: Frame[] = [
   {
     id: 9,
     video: "/assets/videos/portage.mp4",
+    coverImage: null,
     defaultPos: { x: 8, y: 8, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/981e483f71aa764b/9_corner.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/981e483f71aa764b/9_hori.png",
@@ -466,6 +504,7 @@ export default function DynamicFrameLayout() {
             >
               <FrameComponent
                 video={frame.video}
+                coverImage={frame.coverImage}
                 width="100%"
                 height="100%"
                 className="absolute inset-0"
@@ -519,14 +558,25 @@ export default function DynamicFrameLayout() {
               </div>
 
               <div className="mb-6">
-                <video
-                  className="w-full h-80 object-cover rounded-lg"
-                  src={selectedFrame.video}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                />
+                {selectedFrame?.video ? (
+                  <>
+                    <video
+                      className="w-full h-80 object-cover rounded-lg"
+                      src={selectedFrame.video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    />
+                  </>
+                ) : (
+                  <img
+                    className="w-full h-full object-cover rounded-lg"
+                    src={selectedFrame.coverImage ?? undefined}
+                    alt="Frame"
+                  />
+                )}
+
               </div>
 
               <div className="space-y-6">

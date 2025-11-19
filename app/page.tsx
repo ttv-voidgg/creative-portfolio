@@ -10,6 +10,19 @@ import { ppEditorialNewUltralightItalic, inter } from "./fonts"
 // Move frames data to be accessible by the loader
 const initialFrames = [
   {
+    id: 0,
+    video: "",
+    coverImage: "/assets/images/gits-1.jpg",
+    corner: "https://static.cdn-luma.com/files/bcf576df9c38b05f/1_corner_update.png",
+    edgeHorizontal: "https://static.cdn-luma.com/files/bcf576df9c38b05f/1_vert_update.png",
+    edgeVertical: "https://static.cdn-luma.com/files/bcf576df9c38b05f/1_hori_update.png",
+    images: [
+      "/assets/images/Night-CharlesMatheson-001.jpeg",
+      "/assets/images/Night-CharlesMatheson-002.jpeg",
+      "/assets/images/Night-CharlesMatheson-003.jpeg",
+    ],
+  },  
+  {
     id: 1,
     video: "/assets/videos/reel-1.mp4",
     corner: "https://static.cdn-luma.com/files/bcf576df9c38b05f/1_corner_update.png",
