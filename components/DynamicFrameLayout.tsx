@@ -34,12 +34,13 @@ interface Frame {
   images: string[] // Add this line
 }
 
+// [FIXED] Updated positions and widths for a 4x3 grid
 const initialFrames: Frame[] = [
   {
     id: 0,
     video: null,
     coverImage: "/assets/images/gits-1.jpg",
-    defaultPos: { x: 0, y: 0, w: 4, h: 4 },
+    defaultPos: { x: 0, y: 0, w: 3, h: 4 },
     corner: "https://static.cdn-luma.com/files/bcf576df9c38b05f/1_corner_update.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/bcf576df9c38b05f/1_vert_update.png",
     edgeVertical: "https://static.cdn-luma.com/files/bcf576df9c38b05f/1_hori_update.png",
@@ -49,8 +50,7 @@ const initialFrames: Frame[] = [
     autoplayMode: "all",
     isHovered: false,
     title: "Ghost in the Shell",
-    description:
-      "Improving my lighting and post production skills in Blender and Adobe Creative Suite",
+    description: "Improving my lighting and post production skills in Blender and Adobe Creative Suite",
     technologies: ["Blender", "Lens Flare", "Adobe Creative Suite"],
     category: "Photography & Modeling",
     year: "2025",
@@ -62,12 +62,12 @@ const initialFrames: Frame[] = [
       "/assets/images/gits-4.jpg",
       "/assets/images/gits-5.jpg",
     ],
-  },  
+  },
   {
     id: 1,
     video: "/assets/videos/reel-1.mp4",
     coverImage: null,
-    defaultPos: { x: 0, y: 0, w: 4, h: 4 },
+    defaultPos: { x: 3, y: 0, w: 3, h: 4 },
     corner: "https://static.cdn-luma.com/files/bcf576df9c38b05f/1_corner_update.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/bcf576df9c38b05f/1_vert_update.png",
     edgeVertical: "https://static.cdn-luma.com/files/bcf576df9c38b05f/1_hori_update.png",
@@ -92,7 +92,7 @@ const initialFrames: Frame[] = [
     id: 2,
     video: "/assets/videos/porsche.mp4",
     coverImage: null,
-    defaultPos: { x: 4, y: 0, w: 4, h: 4 },
+    defaultPos: { x: 6, y: 0, w: 3, h: 4 },
     corner: "https://static.cdn-luma.com/files/bcf576df9c38b05f/2_corner_update.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/bcf576df9c38b05f/2_vert_update.png",
     edgeVertical: "https://static.cdn-luma.com/files/bcf576df9c38b05f/2_hori_update.png",
@@ -102,22 +102,17 @@ const initialFrames: Frame[] = [
     autoplayMode: "all",
     isHovered: false,
     title: "Porsche Cayman",
-    description:
-      "A 3D model that I created for my Augmented Reality project for a car build and price prototype",
-    technologies: ["Blender", "Three.js", "Vite", "React", "WebGL", "WebXR",  "GLSL", "JavaScript"],
+    description: "A 3D model that I created for my Augmented Reality project for a car build and price prototype",
+    technologies: ["Blender", "Three.js", "Vite", "React", "WebGL", "WebXR", "GLSL", "JavaScript"],
     category: "3D Modeling and Web Development",
     year: "2025",
-    images: [
-    "/assets/images/porsche-001.png",
-    "/assets/images/porsche-002.png",
-    "/assets/images/porsche-003.png",
-    ],
+    images: ["/assets/images/porsche-001.png", "/assets/images/porsche-002.png", "/assets/images/porsche-003.png"],
   },
   {
     id: 3,
     video: "/assets/videos/wpg-beach.mp4",
     coverImage: null,
-    defaultPos: { x: 8, y: 0, w: 4, h: 4 },
+    defaultPos: { x: 9, y: 0, w: 3, h: 4 },
     corner: "https://static.cdn-luma.com/files/3d36d1e0dba2476c/3_Corner_update.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/3d36d1e0dba2476c/3_hori_update.png",
     edgeVertical: "https://static.cdn-luma.com/files/3d36d1e0dba2476c/3_Vert_update.png",
@@ -127,22 +122,17 @@ const initialFrames: Frame[] = [
     autoplayMode: "all",
     isHovered: false,
     title: "Manitoba Spring",
-    description:
-      "Something that I really like here in Manitoba is the beauty of spring",
+    description: "Something that I really like here in Manitoba is the beauty of spring",
     technologies: ["iPhone Native Camera", "Moment Bloom Lens", "Adobe Lightroom", "Adobe Photoshop"],
     category: "Nature Photography",
     year: "2025",
-    images: [
-    "/assets/images/wpg-beach-001.jpeg",
-    "/assets/images/wpg-beach-002.jpeg",
-    "/assets/images/wpg-beach-003.jpeg",
-    ],
+    images: ["/assets/images/wpg-beach-001.jpeg", "/assets/images/wpg-beach-002.jpeg", "/assets/images/wpg-beach-003.jpeg"],
   },
   {
     id: 4,
     video: "/assets/videos/room.mp4",
     coverImage: null,
-    defaultPos: { x: 0, y: 4, w: 4, h: 4 },
+    defaultPos: { x: 0, y: 4, w: 3, h: 4 },
     corner: "https://static.cdn-luma.com/files/9e67e05f37e52522/4_corner_update.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/9e67e05f37e52522/4_hori_update.png",
     edgeVertical: "https://static.cdn-luma.com/files/9e67e05f37e52522/4_vert_update.png",
@@ -154,21 +144,17 @@ const initialFrames: Frame[] = [
     title: "WebGL Full-Stack Portfolio",
     description:
       "I created a portfolio to showcase my Full-Stack software engineering skills. You can visit my portfolio by following this link: https://webdev.eejay.me",
-    technologies: ["Blender", "Three.js", "Vite", "React", "WebGL", "WebXR",  "GLSL", "JavaScript"],
+    technologies: ["Blender", "Three.js", "Vite", "React", "WebGL", "WebXR", "GLSL", "JavaScript"],
     category: "3D Modeling and Web Development",
     year: "2023",
     client: "",
-    images: [
-    "/assets/images/room-001.jpeg",
-    "/assets/images/room-002.jpeg",
-    "/assets/images/room-003.jpeg",
-    ],
+    images: ["/assets/images/room-001.jpeg", "/assets/images/room-002.jpeg", "/assets/images/room-003.jpeg"],
   },
   {
     id: 5,
     video: "/assets/videos/sazabi.mp4",
     coverImage: null,
-    defaultPos: { x: 4, y: 4, w: 4, h: 4 },
+    defaultPos: { x: 3, y: 4, w: 3, h: 4 },
     corner: "https://static.cdn-luma.com/files/9e67e05f37e52522/5_corner_update.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/9e67e05f37e52522/5_hori_update.png",
     edgeVertical: "https://static.cdn-luma.com/files/9e67e05f37e52522/5_verti_update.png",
@@ -178,23 +164,17 @@ const initialFrames: Frame[] = [
     autoplayMode: "all",
     isHovered: false,
     title: "Sazabi",
-    description:
-      "Just learning how to do some armature to animate models",
+    description: "Just learning how to do some armature to animate models",
     technologies: ["Blender"],
     category: "3D Modeling",
     year: "2024",
-    images: [
-    "/assets/images/sazabi-001.png",
-    "/assets/images/sazabi-002.png",
-    "/assets/images/sazabi-003.png",
-    "/assets/images/sazabi-004.png",
-    ],
+    images: ["/assets/images/sazabi-001.png", "/assets/images/sazabi-002.png", "/assets/images/sazabi-003.png", "/assets/images/sazabi-004.png"],
   },
   {
     id: 6,
     video: "/assets/videos/kenora.mp4",
     coverImage: null,
-    defaultPos: { x: 8, y: 4, w: 4, h: 4 },
+    defaultPos: { x: 6, y: 4, w: 3, h: 4 },
     corner: "https://static.cdn-luma.com/files/1199340587e8da1d/6_corner.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/1199340587e8da1d/6_corner-1.png",
     edgeVertical: "https://static.cdn-luma.com/files/1199340587e8da1d/6_vert.png",
@@ -204,24 +184,23 @@ const initialFrames: Frame[] = [
     autoplayMode: "all",
     isHovered: false,
     title: "Kenora Hike",
-    description:
-      "Took a hike with my college instructor and some friends",
+    description: "Took a hike with my college instructor and some friends",
     technologies: ["iPhone Native Camera", "Moment Bloom Lens", "Adobe Lightroom", "Adobe Photoshop"],
     category: "Nature Photography",
     year: "2024",
     images: [
-    "/assets/images/kenora-001.jpeg",
-    "/assets/images/kenora-002.jpeg",
-    "/assets/images/kenora-003.jpeg",
-    "/assets/images/kenora-004.jpeg",
-    "/assets/images/kenora-005.jpeg",
+      "/assets/images/kenora-001.jpeg",
+      "/assets/images/kenora-002.jpeg",
+      "/assets/images/kenora-003.jpeg",
+      "/assets/images/kenora-004.jpeg",
+      "/assets/images/kenora-005.jpeg",
     ],
   },
   {
     id: 7,
     video: "/assets/videos/aurora.mp4",
     coverImage: null,
-    defaultPos: { x: 0, y: 8, w: 4, h: 4 },
+    defaultPos: { x: 9, y: 4, w: 3, h: 4 },
     corner: "https://static.cdn-luma.com/files/b80b5aa00ccc33bd/7_corner.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/b80b5aa00ccc33bd/7_hori.png",
     edgeVertical: "https://static.cdn-luma.com/files/b80b5aa00ccc33bd/7_vert.png",
@@ -231,22 +210,17 @@ const initialFrames: Frame[] = [
     autoplayMode: "all",
     isHovered: false,
     title: "Sky Gazing",
-    description:
-      "My friends and I went on a trip to see the Aurora for the first time",
+    description: "My friends and I went on a trip to see the Aurora for the first time",
     technologies: ["iPhone Native Camera", "Moment Bloom Lens", "Adobe Lightroom", "Adobe Photoshop"],
     category: "Astro Photography",
     year: "2024",
-    images: [
-    "/assets/images/aurora-001.jpeg",
-    "/assets/images/aurora-002.jpeg",
-    "/assets/images/aurora-003.jpeg",
-    ],
+    images: ["/assets/images/aurora-001.jpeg", "/assets/images/aurora-002.jpeg", "/assets/images/aurora-003.jpeg"],
   },
   {
     id: 8,
     video: "/assets/videos/vancity.mp4",
     coverImage: null,
-    defaultPos: { x: 4, y: 8, w: 4, h: 4 },
+    defaultPos: { x: 0, y: 8, w: 3, h: 4 },
     corner: "https://static.cdn-luma.com/files/981e483f71aa764b/8_corner.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/981e483f71aa764b/8_hori.png",
     edgeVertical: "https://static.cdn-luma.com/files/981e483f71aa764b/8_verticle.png",
@@ -261,17 +235,13 @@ const initialFrames: Frame[] = [
     technologies: ["iPhone Native Camera", "Moment Bloom Lens", "Adobe Lightroom", "Adobe Photoshop"],
     category: "Achitectural Photography",
     year: "2025",
-    images: [
-    "/assets/images/vancity-001.jpeg",
-    "/assets/images/vancity-002.jpeg",
-    "/assets/images/vancity-003.jpeg",
-    ],
+    images: ["/assets/images/vancity-001.jpeg", "/assets/images/vancity-002.jpeg", "/assets/images/vancity-003.jpeg"],
   },
   {
     id: 9,
     video: "/assets/videos/portage.mp4",
     coverImage: null,
-    defaultPos: { x: 8, y: 8, w: 4, h: 4 },
+    defaultPos: { x: 3, y: 8, w: 3, h: 4 },
     corner: "https://static.cdn-luma.com/files/981e483f71aa764b/9_corner.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/981e483f71aa764b/9_hori.png",
     edgeVertical: "https://static.cdn-luma.com/files/981e483f71aa764b/9_vert.png",
@@ -286,11 +256,7 @@ const initialFrames: Frame[] = [
     technologies: ["iPhone Native Camera", "Moment Bloom Lens", "Adobe Lightroom", "Adobe Photoshop"],
     category: "Street Photography",
     year: "2023",
-    images: [
-    "/assets/images/portage-001.jpg",
-    "/assets/images/portage-002.jpg",
-    "/assets/images/portage-003.jpg",
-    ],
+    images: ["/assets/images/portage-001.jpg", "/assets/images/portage-002.jpg", "/assets/images/portage-003.jpg"],
   },
 ]
 
@@ -327,9 +293,7 @@ export default function DynamicFrameLayout() {
       const imageUrls = await Promise.all(uploadPromises)
 
       setFrames((prevFrames) =>
-        prevFrames.map((frame) =>
-          frame.id === frameId ? { ...frame, images: [...frame.images, ...imageUrls] } : frame,
-        ),
+        prevFrames.map((frame) => (frame.id === frameId ? { ...frame, images: [...frame.images, ...imageUrls] } : frame)),
       )
     } catch (error) {
       console.error("Error uploading images:", error)
@@ -355,22 +319,30 @@ export default function DynamicFrameLayout() {
     return [0, 1, 2].map((r) => (r === row ? `${hoverSize}fr` : `${nonHoveredSize}fr`)).join(" ")
   }
 
+  // [FIXED] Changed to a 4-column layout
   const getColSizes = () => {
     if (hovered === null) {
-      return "4fr 4fr 4fr"
+      return "3fr 3fr 3fr 3fr"
     }
     const { col } = hovered
-    const nonHoveredSize = (12 - hoverSize) / 2
-    return [0, 1, 2].map((c) => (c === col ? `${hoverSize}fr` : `${nonHoveredSize}fr`)).join(" ")
+    const nonHoveredSize = (12 - hoverSize) / 3 // There are 3 non-hovered columns
+    return [0, 1, 2, 3].map((c) => (c === col ? `${hoverSize}fr` : `${nonHoveredSize}fr`)).join(" ")
   }
 
+  // [FIXED] Updated to handle 4 columns correctly
   const getTransformOrigin = (x: number, y: number) => {
     const vertical = y === 0 ? "top" : y === 4 ? "center" : "bottom"
-    const horizontal = x === 0 ? "left" : x === 4 ? "center" : "right"
+    let horizontal = "center"
+    if (x === 0) {
+      horizontal = "left"
+    } else if (x === 9) {
+      // Last column starts at x=9 in a 4-column (0,3,6,9) grid
+      horizontal = "right"
+    }
     return `${vertical} ${horizontal}`
   }
 
-  const updateFrameProperty = (id: number, property: keyof Frame, value: number) => {
+  const updateFrameProperty = (id: number, property: keyof Frame, value: any) => {
     setFrames(frames.map((frame) => (frame.id === id ? { ...frame, [property]: value } : frame)))
   }
 
@@ -395,23 +367,17 @@ export default function DynamicFrameLayout() {
   }
 
   function parseDescription(text: string) {
-    const urlRegex = /(https?:\/\/[^\s]+)/g;
-    const parts = text.split(urlRegex);
+    const urlRegex = /(https?:\/\/[^\s]+)/g
+    const parts = text.split(urlRegex)
     return parts.map((part, i) =>
-        urlRegex.test(part) ? (
-            <a
-                key={i}
-                href={part}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline"
-            >
-              {part}
-            </a>
-        ) : (
-            part
-        )
-    );
+      urlRegex.test(part) ? (
+        <a key={i} href={part} target="_blank" rel="noopener noreferrer" className="underline">
+          {part}
+        </a>
+      ) : (
+        part
+      ),
+    )
   }
 
   return (
@@ -488,7 +454,8 @@ export default function DynamicFrameLayout() {
       >
         {frames.map((frame) => {
           const row = Math.floor(frame.defaultPos.y / 4)
-          const col = Math.floor(frame.defaultPos.x / 4)
+          // [FIXED] Column calculation now divides by 3 for the new column width
+          const col = Math.floor(frame.defaultPos.x / 3)
           const transformOrigin = getTransformOrigin(frame.defaultPos.x, frame.defaultPos.y)
 
           return (
@@ -521,10 +488,7 @@ export default function DynamicFrameLayout() {
                 label={`Frame ${frame.id}`}
                 showFrame={showFrames}
                 autoplayMode={autoplayMode}
-                isHovered={
-                  hovered?.row === Math.floor(frame.defaultPos.y / 4) &&
-                  hovered?.col === Math.floor(frame.defaultPos.x / 4)
-                }
+                isHovered={hovered?.row === row && hovered?.col === col}
                 onClick={() => handleFrameClick(frame)}
               />
             </motion.div>
@@ -576,7 +540,6 @@ export default function DynamicFrameLayout() {
                     alt="Frame"
                   />
                 )}
-
               </div>
 
               <div className="space-y-6">
